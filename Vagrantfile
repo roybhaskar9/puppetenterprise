@@ -72,6 +72,7 @@ Vagrant.configure("2") do |config|
      sudo service ssh restart
      sudo echo "127.0.0.1  puppetmaster.example.com  puppetmaster  puppet" > /etc/hosts
      #sudo cp /vagrant/puppet*.tar.gz /root
+     #sudo tar -xvzf /root/puppet*.tar.gz
      sudo /usr/bin/passwd root <<EOF
 12345678
 12345678
