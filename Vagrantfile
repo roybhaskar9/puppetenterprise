@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", inline: <<-SHELL
      sudo sed -i '28s/without-password/yes/' /etc/ssh/sshd_config
      sudo service ssh restart
-     sudo echo "127.0.0.1  puppetmaster.example.com  puppetmaster  puppet" > /etc/hosts
+     sudo echo "127.0.0.1  puppetmaster.example.com  puppetmaster  puppet localhost localhost.localdomain" > /etc/hosts
      #sudo cp /vagrant/puppet*.tar.gz /root
      #sudo tar -xvzf /root/puppet*.tar.gz
      sudo /usr/bin/passwd root <<EOF
